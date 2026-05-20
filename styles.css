@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 nav {
-    display:flex;
+    display: flex;
     gap: 20px;
 }
 
@@ -52,6 +52,16 @@ nav a {
     margin-bottom: 30px;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.secondary-button {
+    background-color: #ffffff;
+    color: #2f5132;
+}
 .button {
     display: inline-block;
     padding: 14px 24px;
