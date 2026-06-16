@@ -128,4 +128,8 @@ footer {
     .service-list {
         grid-template-columns: 1fr;
     }
+    
+    .service-areas {
+        background-color: #f4efe6;
+    }
 }
