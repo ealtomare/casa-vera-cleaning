@@ -57,11 +57,6 @@ nav a {
     gap: 16px;
     flex-wrap: wrap;
 }
-
-.secondary-button {
-    background-color: #ffffff;
-    color: #2f5132;
-}
 .button {
     display: inline-block;
     padding: 14px 24px;
@@ -70,6 +65,10 @@ nav a {
     text-decoration: none;
     border-radius: 999px;
     font-weight: 700;
+}
+.secondary-button {
+    background-color: #ffffff;
+    color: #2f5132;
 }
 
 .section {
@@ -109,6 +108,39 @@ footer {
     text-align: center;
 }
 
+
+
+.service-areas {
+    background-color: #f4efe6;
+}
+.quote-form {
+    max-width: 600px;
+    margin-top: 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
 @media (max-width: 800px) {
     .site-header {
         flex-direction: column;
@@ -128,8 +160,4 @@ footer {
     .service-list {
         grid-template-columns: 1fr;
     }
-    
-    .service-areas {
-        background-color: #f4efe6;
-    }
-}
+} 
