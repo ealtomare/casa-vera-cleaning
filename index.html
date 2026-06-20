@@ -111,7 +111,8 @@
             <p>Tell us about your home and the type of cleaning you need.
                 We'll follow up with pricing and availability.
             </p>
-            <form class="quote-form">
+            <form class="quote-form" name="quote-request" method="POST" data-netlify="true"></form>>
+                <input type="hidden" name="form-name" value="quote-request">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input id="name" type="text" name="name">
@@ -119,17 +120,17 @@
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input id="email" type="email" name="email">
+                    <input id="email" type="email" name="email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone</label>
-                    <input id="phone" type="tel" name="phone">
+                    <input id="phone" type="tel" name="phone" required>
                 </div>
 
                 <div class="form-group">
                     <label for="zip">ZIP Code</label>
-                    <input id="zip" type="text" name="zip">
+                    <input id="zip" type="text" name="zip" required>
                 </div>
 
                 <div class="form-group">
@@ -142,7 +143,16 @@
                     <option value="recurring">Recurring Cleaning</option>
                     </select>
                 </div>
-
+                <div class="form-group">
+                    <label for="home-size">Home Size</label>
+                    <select id="home-size" name="home-size">
+                        <option value="">Select a home size</option>
+                        <option value="studio-1-bed">Studio / 1 Bedroom</option>
+                        <option value="2-bed">2 Bedrooms</option>
+                        <option value="3-bed">3 Bedrooms</option>
+                        <option value="4-plus-bed">4+ Bedrooms</option>
+                    </select>
+                </div>
                 <div class="form-group">
                     <label for="message">Tell us about your home</label>
                     <textarea id="message" name="message" rows="5"></textarea>
