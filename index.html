@@ -111,7 +111,8 @@
             <p>Tell us about your home and the type of cleaning you need.
                 We'll follow up with pricing and availability.
             </p>
-            <form class="quote-form" name="quote-request" method="POST" data-netlify="true"></form>>
+
+            <form class="quote-form" name="quote-request" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="quote-request">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -135,7 +136,7 @@
 
                 <div class="form-group">
                     <label for="service">Type of Cleaning</label>
-                    <select id="service" name="service">
+                    <select id="service" name="service" required>
                     <option value="">Select a service</option>
                     <option value="standard">Standard Cleaning</option>
                     <option value="deep">Deep Cleaning</option>
@@ -145,7 +146,7 @@
                 </div>
                 <div class="form-group">
                     <label for="home-size">Home Size</label>
-                    <select id="home-size" name="home-size">
+                    <select id="home-size" name="home-size" required>
                         <option value="">Select a home size</option>
                         <option value="studio-1-bed">Studio / 1 Bedroom</option>
                         <option value="2-bed">2 Bedrooms</option>
