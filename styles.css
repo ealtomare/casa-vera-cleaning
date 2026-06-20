@@ -162,6 +162,34 @@ footer {
 .why-card h3 {
     margin-top: 0;
 }
+.process-section {
+    background-color: #e8efe4;
+}
+
+.process-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.process-step {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+}
+
+.step-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background-color: #2f5132;
+    color: #ffffff;
+    font-weight: 700;
+}
 @media (max-width: 800px) {
     .site-header {
         flex-direction: column;
