@@ -141,6 +141,27 @@ footer {
 .form-group textarea {
     resize: vertical;
 }
+.section-intro {
+    max-width: 650px;
+    margin-bottom: 32px;
+}
+
+.why-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 24px;
+    background-color: #ffffff;
+    border-left: 5px solid #2f5132;
+    border-radius: 12px;
+}
+
+.why-card h3 {
+    margin-top: 0;
+}
 @media (max-width: 800px) {
     .site-header {
         flex-direction: column;
@@ -159,5 +180,8 @@ footer {
 
     .service-list {
         grid-template-columns: 1fr;
+    }
+    .why-list {
+    grid-template-columns: 1fr;
     }
 } 
