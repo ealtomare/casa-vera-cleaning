@@ -217,6 +217,11 @@ footer {
 .faq-item p {
     margin: 0;
 }
+.form-note {
+    max-width: 600px;
+    font-size: 0.95rem;
+    color: #555555;
+}
 @media (max-width: 800px) {
     .site-header {
         flex-direction: column;
