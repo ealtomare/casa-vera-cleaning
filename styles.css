@@ -1,7 +1,14 @@
 * {
     box-sizing: border-box;
 }
-
+:root {
+    --color-background: #faf7f0;
+    --color-surface: #ffffff;
+    --color-primary: #2f5132;
+    --color-primary-light: #e8efe4;
+    --color-accent: #f4efe6;
+    --color-text: #222222;
+}
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -60,7 +67,7 @@ nav a {
 .button {
     display: inline-block;
     padding: 14px 24px;
-    background-color: #2f5132;
+    background-color: var(--color-primary);
     color: #ffffff;
     text-decoration: none;
     border-radius: 999px;
@@ -68,7 +75,7 @@ nav a {
 }
 .secondary-button {
     background-color: #ffffff;
-    color: #2f5132;
+    color: var(--color-primary);
 }
 
 .section {
@@ -155,7 +162,7 @@ footer {
 .why-card {
     padding: 24px;
     background-color: #ffffff;
-    border-left: 5px solid #2f5132;
+    border-left: 5px solid var(--color-primary);
     border-radius: 12px;
 }
 
@@ -186,7 +193,7 @@ footer {
     height: 42px;
     margin-bottom: 16px;
     border-radius: 50%;
-    background-color: #2f5132;
+    background-color: var(--color-primary);
     color: #ffffff;
     font-weight: 700;
 }
