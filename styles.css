@@ -190,6 +190,26 @@ footer {
     color: #ffffff;
     font-weight: 700;
 }
+.faq-section {
+    background-color: #faf7f0;
+}
+
+.faq-list {
+    max-width: 800px;
+}
+
+.faq-item {
+    padding: 24px 0;
+    border-bottom: 1px solid #dddddd;
+}
+
+.faq-item h3 {
+    margin: 0 0 8px;
+}
+
+.faq-item p {
+    margin: 0;
+}
 @media (max-width: 800px) {
     .site-header {
         flex-direction: column;
