@@ -229,6 +229,20 @@ footer {
     color: var(--color-primary);
     font-weight: 700;
 }
+footer a {
+    color: #ffffff;
+    font-weight: 700;
+}
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-logo {
+    width: 400px;
+    height: auto;
+    display: block;
+}
 @media (max-width: 800px) {
     .section {
         padding: 56px 6%;
@@ -253,5 +267,8 @@ footer {
     .why-list,
     .process-list {
         grid-template-columns: 1fr;
+    }
+    .site-logo {
+    width: 150px;
     }
 } 
