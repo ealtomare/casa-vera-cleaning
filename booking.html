@@ -157,20 +157,24 @@
         </div>
 
         <div class="form-field">
-          <label for="requestedWindow">
-            Preferred arrival window
-          </label>
+        <label for="selectedSlot">
+            Available appointment times
+        </label>
 
-          <select
-            id="requestedWindow"
-            name="requestedWindow"
+        <select
+            id="selectedSlot"
+            name="selectedSlot"
             required
-          >
-            <option value="">Choose a window</option>
-            <option value="morning">Morning</option>
-            <option value="midday">Midday</option>
-            <option value="afternoon">Afternoon</option>
-          </select>
+            disabled
+        >
+            <option value="">Choose a date first</option>
+        </select>
+
+        <p
+            id="availability-status"
+            role="status"
+            aria-live="polite"
+        ></p>
         </div>
 
         <div class="form-field">
@@ -194,6 +198,6 @@
     </section>
   </main>
 
-  <script src="booking.js?v=2"></script>
+  <script src="booking.js?v=3"></script>
 </body>
 </html>
