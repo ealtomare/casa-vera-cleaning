@@ -20,6 +20,9 @@ const recurringPriceElement = document.querySelector(
 );
 const quoteMessage = document.querySelector("#quote-message");
 
+const continueButton =
+  document.querySelector("#continue-button");
+
 const moneyFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
@@ -139,12 +142,33 @@ function displayQuote(data) {
       "This estimate is based on the information you provided.";
   }
 
+  sessionStorage.setItem(
+    "casaVeraQuote",
+    JSON.stringify({
+      quote: data,
+      customerSelections: {
+        service: data.inputs.service,
+        frequency: data.inputs.frequency,
+        bedrooms: data.inputs.bedrooms,
+        bathrooms: data.inputs.bathrooms,
+        squareFootageBand: data.inputs.squareFootageBand,
+        condition: data.inputs.condition,
+        zipCode: data.inputs.zipCode,
+      },
+    })
+  );
+
   resultSection.hidden = false;
+
   resultSection.scrollIntoView({
     behavior: "smooth",
     block: "start",
   });
 }
+
+continueButton.addEventListener("click", () => {
+  window.location.href = "/booking.html";
+});
 
 function handleQuoteError(data) {
   if (data.status === "outside_service_area") {
