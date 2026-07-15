@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Book Your Cleaning | Casa Vera Cleaning</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="quote-page">
+    <section class="quote-container">
+      <header class="quote-header">
+        <p class="eyebrow">Casa Vera Cleaning</p>
+        <h1>Choose your cleaning time</h1>
+
+        <p>
+          Review your estimate and enter your service information.
+        </p>
+      </header>
+
+      <section id="booking-summary" class="quote-result">
+        <h2>Your estimate</h2>
+
+        <div class="price-block">
+          <span>Initial cleaning</span>
+          <strong id="booking-initial-price"></strong>
+        </div>
+
+        <div
+          id="booking-recurring-block"
+          class="price-block"
+          hidden
+        >
+          <span id="booking-recurring-label">
+            Future cleanings
+          </span>
+
+          <strong id="booking-recurring-price"></strong>
+        </div>
+
+        <p id="booking-service-summary"></p>
+
+        <a href="/quote.html">Change quote details</a>
+      </section>
+
+      <form id="booking-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="firstName">First name</label>
+
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              autocomplete="given-name"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="lastName">Last name</label>
+
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              autocomplete="family-name"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email address</label>
+
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Phone number</label>
+
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            autocomplete="tel"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="address">Street address</label>
+
+          <input
+            id="address"
+            name="address"
+            type="text"
+            autocomplete="street-address"
+            required
+          >
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="city">City</label>
+
+            <input
+              id="city"
+              name="city"
+              type="text"
+              autocomplete="address-level2"
+              value="Austin"
+              required
+            >
+          </div>
+
+          <div class="form-field">
+            <label for="bookingZipCode">ZIP code</label>
+
+            <input
+              id="bookingZipCode"
+              name="bookingZipCode"
+              type="text"
+              inputmode="numeric"
+              maxlength="5"
+              autocomplete="postal-code"
+              readonly
+              required
+            >
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="requestedDate">
+            Preferred cleaning date
+          </label>
+
+          <input
+            id="requestedDate"
+            name="requestedDate"
+            type="date"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="requestedWindow">
+            Preferred arrival window
+          </label>
+
+          <select
+            id="requestedWindow"
+            name="requestedWindow"
+            required
+          >
+            <option value="">Choose a window</option>
+            <option value="morning">Morning</option>
+            <option value="midday">Midday</option>
+            <option value="afternoon">Afternoon</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="bookingNotes">
+            Access, pet, or cleaning notes
+          </label>
+
+          <textarea
+            id="bookingNotes"
+            name="bookingNotes"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Continue
+        </button>
+
+        <p id="booking-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="booking.js?v=1"></script>
+</body>
+</html>
