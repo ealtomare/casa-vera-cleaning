@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Instant Cleaning Quote | Casa Vera Cleaning</title>
+
+  <!-- Change this path if your stylesheet has a different name -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="quote-page">
+    <section class="quote-container">
+      <header class="quote-header">
+        <p class="eyebrow">Casa Vera Cleaning</p>
+
+        <h1>Get your cleaning price</h1>
+
+        <p>
+          Answer a few questions to receive an instant estimate.
+          No phone call or credit card required.
+        </p>
+      </header>
+
+      <form id="quote-form">
+        <div class="form-field">
+          <label for="zipCode">ZIP code</label>
+
+          <input
+            id="zipCode"
+            name="zipCode"
+            type="text"
+            inputmode="numeric"
+            pattern="[0-9]{5}"
+            maxlength="5"
+            autocomplete="postal-code"
+            placeholder="78745"
+            required
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="service">Type of cleaning</label>
+
+          <select id="service" name="service" required>
+            <option value="">Choose a service</option>
+            <option value="standard_clean">Standard cleaning</option>
+            <option value="deep_clean">Deep cleaning</option>
+            <option value="move_in_out">Move-in or move-out cleaning</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="frequency">How often?</label>
+
+          <select id="frequency" name="frequency" required>
+            <option value="">Choose a frequency</option>
+            <option value="one_time">One time</option>
+            <option value="weekly">Weekly</option>
+            <option value="biweekly">Every two weeks</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="bedrooms">Bedrooms</label>
+
+            <select id="bedrooms" name="bedrooms" required>
+              <option value="">Choose</option>
+              <option value="0">Studio</option>
+              <option value="1">1 bedroom</option>
+              <option value="2">2 bedrooms</option>
+              <option value="3">3 bedrooms</option>
+              <option value="4">4 bedrooms</option>
+              <option value="5">5 bedrooms</option>
+              <option value="6">6 bedrooms</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="bathrooms">Bathrooms</label>
+
+            <select id="bathrooms" name="bathrooms" required>
+              <option value="">Choose</option>
+              <option value="1">1 bathroom</option>
+              <option value="1.5">1.5 bathrooms</option>
+              <option value="2">2 bathrooms</option>
+              <option value="2.5">2.5 bathrooms</option>
+              <option value="3">3 bathrooms</option>
+              <option value="3.5">3.5 bathrooms</option>
+              <option value="4">4 bathrooms</option>
+              <option value="5">5 bathrooms</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="squareFootageBand">
+            Approximate home size
+          </label>
+
+          <select
+            id="squareFootageBand"
+            name="squareFootageBand"
+            required
+          >
+            <option value="">Choose a size</option>
+            <option value="under_1000">Under 1,000 sq. ft.</option>
+            <option value="1000_1499">1,000–1,499 sq. ft.</option>
+            <option value="1500_1999">1,500–1,999 sq. ft.</option>
+            <option value="2000_2499">2,000–2,499 sq. ft.</option>
+            <option value="2500_2999">2,500–2,999 sq. ft.</option>
+            <option value="3000_3499">3,000–3,499 sq. ft.</option>
+          </select>
+        </div>
+
+        <fieldset class="form-field">
+          <legend>Current condition</legend>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="condition"
+              value="maintained"
+              required
+            >
+
+            <span>
+              <strong>Regularly maintained</strong>
+              <small>Routine dust, dirt, and everyday use</small>
+            </span>
+          </label>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="condition"
+              value="extra_attention"
+            >
+
+            <span>
+              <strong>Needs extra attention</strong>
+              <small>
+                Noticeable buildup or several months since a thorough clean
+              </small>
+            </span>
+          </label>
+
+          <label class="radio-option">
+            <input
+              type="radio"
+              name="condition"
+              value="significant_buildup"
+            >
+
+            <span>
+              <strong>Significant buildup</strong>
+              <small>
+                May require a customized cleaning plan
+              </small>
+            </span>
+          </label>
+        </fieldset>
+
+        <button id="quote-button" type="submit">
+          Get my price
+        </button>
+
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section
+        id="quote-result"
+        class="quote-result"
+        aria-live="polite"
+        hidden
+      >
+        <p class="eyebrow">Your Casa Vera estimate</p>
+
+        <div class="price-block">
+          <span>Initial cleaning</span>
+          <strong id="initial-price"></strong>
+        </div>
+
+        <div id="recurring-price-block" class="price-block" hidden>
+          <span id="recurring-label">Future cleanings</span>
+          <strong id="recurring-price"></strong>
+        </div>
+
+        <p id="quote-message"></p>
+
+        <button id="continue-button" type="button">
+          See available times
+        </button>
+      </section>
+    </section>
+  </main>
+
+  <script src="quote.js"></script>
+</body>
+</html>

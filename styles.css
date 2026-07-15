@@ -243,6 +243,129 @@ footer a {
     height: auto;
     display: block;
 }
+
+.quote-page {
+  padding: 4rem 1.25rem;
+}
+
+.quote-container {
+  width: min(100%, 700px);
+  margin: 0 auto;
+}
+
+.quote-header {
+  margin-bottom: 2rem;
+}
+
+.quote-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  padding: 0.9rem;
+  font: inherit;
+}
+
+fieldset.form-field {
+  border: 0;
+  padding: 0;
+}
+
+fieldset.form-field legend {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.radio-option {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.radio-option input {
+  width: auto;
+}
+
+.radio-option span {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.radio-option small {
+  line-height: 1.4;
+}
+
+#quote-button,
+#continue-button {
+  width: 100%;
+  padding: 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#quote-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+#form-status {
+  min-height: 1.5rem;
+  margin-top: 1rem;
+}
+
+.quote-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 2px solid currentColor;
+  border-radius: 0.75rem;
+}
+
+.price-block {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid currentColor;
+}
+
+.price-block strong {
+  font-size: 1.5rem;
+}
+
+#quote-message {
+  margin: 1.25rem 0;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 800px) {
     .section {
         padding: 56px 6%;
